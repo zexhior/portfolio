@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'myFirstFont';
+    src: url('./fonts/Roboto-Light.ttf') format('truetype');
+}
+
+*{
+    font-family: 'myFirstFont';
+    margin: 0;
+}
+
+/*-------------------------Section About----------------------------*/
+.about{
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+}
+
+    /*-------------------------Section About Element 1----------------------------*/
+.about .about-image{
+    width: 50%;
+}
+
+.about .about-image img{
+    width: 100%;
+}
+
+    /*-------------------------Section About Element 2----------------------------*/
+.about .about-presentation{
+    width: 50%;
+    padding: 100px;
+}
+
+.about .about-presentation p{
+    letter-spacing: 1px;
+    text-align: justify;
+    margin: 10px;
+}
+
+/*-------------------------Section Footer----------------------------*/
+.footer{
+    background-color: rgb(11, 23, 77);
+    color: white;
+    padding: 5px 30px 30px 30px;
+}
+    /*-------------------------Section Footer Element 1----------------------------*/
+.footer .copyright{
+    width: 50%;
+    text-align: center;
+    background-color: rgb(0, 0, 167);
+    padding: 20px;
+    border-radius: 50px;
+    margin: -35px auto;
+    font-weight: 450;
+}
+    /*-------------------------Section Footer Element 2----------------------------*/
+.footer .footer-content{
+    display: flex;
+    /*justify-content: right;*/
+}
+
+        /*-------------------------Section Footer Element 2 Sub-Element 1----------------------------*/
+.footer .footer-content .footer-socialnetwork{
+    width: 50%;
+    height: 100%;
+    padding: 50px;
+}
+
+.footer .footer-content .footer-socialnetwork .footer-socialnetwork-text{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer .footer-content .footer-socialnetwork .footer-socialnetwork-text p{
+    margin: 0;
+}
+
+.footer .footer-content .footer-socialnetwork .footer-socialnetwork-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-content .footer-socialnetwork .footer-socialnetwork-link a .socialnetwork{
+    width: 100px;
+    height: 100px;
+    filter: invert(100%) sepia(100%) saturate(100%);
+    transition: all 300ms ease-in;
+}
+
+.footer .footer-content .footer-socialnetwork .footer-socialnetwork-link a .socialnetwork:hover{
+    filter: invert(50%) sepia(50%) saturate(50%);
+    transition: all 300ms ease-in;
+}
+        /*-------------------------Section Footer Element 2 Sub-Element 2----------------------------*/
+.footer .footer-content .footer-contact{
+    width: 50%;
+    margin-right: 20px;
+    padding: 50px;
+}
+
+.footer .footer-content .footer-contact h2{
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 2px white solid;
+    margin: 0 0 30px 0;
+}
+
+.footer .footer-content .footer-contact .footer-contact-list{
+    margin-left: 40px;
+}
+
+/*-------------------------Section Header----------------------------*/
+.header{
+    height: 500px;
+}
+    /*-------------------------Section Header Element 1----------------------------*/
+.header .night{
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to right, rgb(3, 3, 66),rgb(1, 1, 26));
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+    /*-------------------------Section Header Element 2----------------------------*/
+.header .ontopnight{
+    color: white;
+}
+
+.header .ontopnight .presentation{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.header .ontopnight .presentation .text{
+    font-size: 20px;
+}
+
+/*-------------------------Section Navigation----------------------------*/
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+    /*-------------------------Section Navigation Element 1----------------------------*/
+.navigation .list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    float: right;
+}
+        /*-------------------------Section Navigation Element 1 Sub-Element 1----------------------------*/
+.navigation .list .list-element{
+    margin-right: 30px;
+    cursor: pointer;
+    transition: color 300ms ease-in;
+}
+
+.navigation .list .list-element a{
+    text-decoration: none;
+    color: white;
+    transition: color 300ms ease-in;
+}
+
+.navigation .list .list-elementa:hover{
+    color: rgb(68, 68, 68);
+    transition: color 300ms ease-in;
+}
+
+/*-------------------------Section Skills----------------------------*/
+.skills{
+    padding-bottom: 20px;
+    
+}
+    /*-------------------------Section Skills Element 1----------------------------*/
+.skills .title{
+    text-align: center;
+}
+    /*-------------------------Section Skills Element 2----------------------------*/
+.skills .list-skills{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+        /*-------------------------Section Skills Element 2 Sub-Element 1----------------------------*/
+.skills .list-skills .section{
+    width: 30%;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 1px 1px 1px 1px rgba(165, 165, 165, 0.801);
+}
+.skills .list-skills .section .section-title{
+    padding: 10px;
+}
+.skills .list-skills .section .section-content{
+    padding: 5px;
+}
+.skills .list-skills .section .section-content .section-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*-------------------------Section Skills MediaQuery----------------------------*/
+@media screen and (max-width: 900px) {
+    .skills .list-skills .section{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .about{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    .about .about-image{
+        width: 80%;
+    }
+
+    .about .about-image img{
+        width: 100%;
+    }
+
+    .about .about-presentation{
+        width: 80%;
+        padding: 0;
+    }
+
+    .about .about-presentation p{
+        margin: 20px;
+    }
+
+    .footer{
+        width: 100%;
+        padding: 0 0 50px 0;
+    }
+
+    .footer .footer-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer .footer-content .footer-socialnetwork{
+        width: 100%;
+        padding: 0;
+    }
+
+    .footer .footer-content .footer-contact{
+        margin-right: 20px;
+        padding: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+    .footer .footer-content .footer-contact .footer-contact-list{
+        text-align: center;
+    }
+}
+
+/*-------------------------Section Card----------------------------*/
+.card{
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: all 600ms ease-in-out;
+}
+
+.card #card-image{
+    width: 50px;
+    height: 50px;
+}
+
+.card:hover{
+    background-color: rgb(175, 175, 175);
+    transform: rotate3d(1,1,1,360deg);
+    transition: all 600ms ease-in-out;
+}
+
+
+/*-------------------------Section Contactme----------------------------*/
+.contactme{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.contactme .contactme-img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: invert(100%) sepia(100%) saturate(100%);
+}
+
+.button{
+    outline: 0;
+    border: 0;
+    background-color: rgb(0, 0, 172);
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 450;
+    border-radius: 5px;
+    transition: all 600ms ease-in-out;
+}
+
+.button:hover{
+    transition: all 600ms ease-in-out;
+    background-color: rgb(0, 0, 104);
+}
+
+@keyframes goup {
+    0%{  
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-500px);
+    }
+}
+
