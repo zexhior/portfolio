@@ -50,6 +50,8 @@ const tools = document.querySelector(".skill__tools-section");
 const content = document.querySelector(".content");
 const projects = document.querySelector(".projects__list");
 const contacts = document.querySelector(".contacts__content-left-list");
+const burger = document.querySelector(".burger");
+const burgerList = document.querySelector(".burger-element-list");
 
 function card(project) {
   return `<!-- Debut Card -->
@@ -105,6 +107,18 @@ function init() {
   );
   projectsList.forEach((project) => {
     projects.insertAdjacentHTML("beforeend", card(project));
+  });
+  burger.addEventListener("click", (e) => {
+    burgerList.style.display === "none"
+      ? (burgerList.style.display = "inline")
+      : (burgerList.style.display = "none");
+  });
+  burgerList.addEventListener("click", (e) => {
+    if (e.target.parentNode.classList.contains("list-item")) {
+      burgerList.style.display = "none";
+    } else {
+      console.log(e.target);
+    }
   });
   // contactList.forEach((contact) =>
   //   contacts.insertAdjacentHTML(

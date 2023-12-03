@@ -41,6 +41,42 @@ body {
   background-color: var(--color-nav);
 }
 
+.nav .burger-list {
+  visibility: hidden;
+  margin: 0 10px 0 0;
+}
+
+.nav .burger-list .burger-icon {
+  margin: 5px 0 0 0;
+}
+
+.nav .burger-list .burger-icon .burger {
+  padding: 5px;
+  border-radius: 2px;
+  background-color: var(--color-cardhead);
+}
+
+.nav .burger-list .burger:hover {
+  background-color: var(--color-carhead-hover);
+  transition: background-color 300ms ease-in;
+}
+.nav .burger-list .burger-element-list {
+  display: none;
+}
+
+.nav .burger-list .burger-element-list ul {
+  position: absolute;
+  margin: 0 0 0 -121px;
+  z-index: 5;
+
+  background-color: rgb(21, 21, 21);
+}
+
+.nav .burger-list .burger-element-list ul li {
+  padding: 10px 0;
+  list-style: none;
+}
+
 .logo {
   margin: 0 10px;
   padding: 0;
@@ -424,6 +460,24 @@ body {
 
 /************ MediaQuery ******************/
 @media screen and (max-width: 800px) {
+  /************* Nav *****************/
+  .nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    color: rgb(222, 222, 222);
+    background-color: var(--color-nav);
+  }
+
+  .nav .burger-list {
+    visibility: visible;
+  }
+
+  .list {
+    display: none;
+  }
   /************* Home ***************/
   .content .home {
     width: 100%;
